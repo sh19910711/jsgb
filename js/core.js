@@ -454,7 +454,7 @@ class RAM {
     this.data = new Array(0x10000);
   }
 
-  read8() {
+  read8(addr) {
     if ((addr & 0xFF00) == 0xFF00) {
       switch (addr & 0xFF) {
       case 0x00: return this.core.sys.P1;
@@ -482,14 +482,14 @@ class RAM {
     }
 
     if (addr >= 0xC000 && addr < 0xDE00) {
-      return mem[addr]; // TODO
+      return this.data[addr]; // TODO
     }
 
     if (addr >= 0xE000 && addr < 0xFE00) {
-      return mem[addr - 0x2000]; // TODO
+      return this.data[addr - 0x2000]; // TODO
     }
 
-    return mem[addr];
+    return this.data[addr];
   }
 }
 
