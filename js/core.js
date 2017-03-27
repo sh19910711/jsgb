@@ -3307,8 +3307,10 @@ class Operations {
   }
 
   RESHL(b) {
-    const r = this.m.read8(this.r.HL);
-    this.m.write8(this.r.HL, ~(~r & 0xFF | 1 << b));
+    return function() {
+      const r = this.m.read8(this.r.HL);
+      this.m.write8(this.r.HL, ~(~r & 0xFF | 1 << b));
+    };
     this.cycles = 16;
   }
 
