@@ -68,6 +68,12 @@ class Registers {
   }
 }
 
+class System {
+  constructor(core) {
+    this.core = core;
+  }
+}
+
 class Operations {
   constructor(core) {
     const map = new Array(0xFF);
