@@ -675,6 +675,11 @@ class RAM {
   read16(addr) {
     return this.read8(addr) | this.read8(addr + 1) << 8;
   }
+
+  write16(addr, v) {
+    this.write8(addr, data & 0x00FF);
+    this.write8(addr + 1, (data & 0xFF00) >> 8);
+  }
 }
 
 class LCD {
