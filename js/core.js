@@ -135,20 +135,20 @@ class System {
       | this.IF_JOYPAD << 4;
   }
 
-  set P1(v) { this.P1 = v & 0xFF }
-  set SB(v) { this.SB = v & 0xFF }
-  set SC(v) { this.SC = v & 0xFF }
-  set DIV(v) { this.DIV = v & 0xFF }
-  set TIMA(v) { this.TIMA = v & 0xFF }
-  set TMA(v) { this.TMA = v & 0xFF }
-  set TAC(v) { this.TAC = v & 0xFF }
-  set DMA(v) { this.DMA = v & 0xFF }
-  set IME(v) { this.IME = v & 0xFF }
-  set IE_VBLANK(v) { this.IE_VBLANK = v & 0x01 }
-  set IE_LCD_STAT(v) { this.IE_LCD_STAT = v & 0x01 }
-  set IE_TIMER(v) { this.IE_TIMER = v & 0x01 }
-  set IE_SERIAL(v) { this.IE_SERIAL = v & 0x01 }
-  set IE_JOYPAD(v) { this.IE_JOYPAD = v & 0x01 }
+  set P1(v) { this._.P1 = v & 0xFF }
+  set SB(v) { this._.SB = v & 0xFF }
+  set SC(v) { this._.SC = v & 0xFF }
+  set DIV(v) { this._.DIV = v & 0xFF }
+  set TIMA(v) { this._.TIMA = v & 0xFF }
+  set TMA(v) { this._.TMA = v & 0xFF }
+  set TAC(v) { this._.TAC = v & 0xFF }
+  set DMA(v) { this._.DMA = v & 0xFF }
+  set IME(v) { this._.IME = v & 0xFF }
+  set IE_VBLANK(v) { this._.IE_VBLANK = v & 0x01 }
+  set IE_LCD_STAT(v) { this._.IE_LCD_STAT = v & 0x01 }
+  set IE_TIMER(v) { this._.IE_TIMER = v & 0x01 }
+  set IE_SERIAL(v) { this._.IE_SERIAL = v & 0x01 }
+  set IE_JOYPAD(v) { this._.IE_JOYPAD = v & 0x01 }
   set IE(v) {
     this.IE_VBLANK   = (v & 0x01) >> 0;
     this.IE_LCD_STAT = (v & 0x02) >> 1;
@@ -156,11 +156,11 @@ class System {
     this.IE_SERIAL   = (v & 0x08) >> 3;
     this.IE_JOYPAD   = (v & 0x10) >> 4;
   }
-  set IF_VBLANK(v) { this.IF_VBLANK = v & 0x01 }
-  set IF_LCD_STAT(v) { this.IF_LCD_STAT = v & 0x01 }
-  set IF_TIMER(v) { this.IF_TIMER = v & 0x01 }
-  set IF_SERIAL(v) { this.IF_SERIAL = v & 0x01 }
-  set IF_JOYPAD(v) { this.IF_JOYPAD = v & 0x01 }
+  set IF_VBLANK(v) { this._.IF_VBLANK = v & 0x01 }
+  set IF_LCD_STAT(v) { this._.IF_LCD_STAT = v & 0x01 }
+  set IF_TIMER(v) { this._.IF_TIMER = v & 0x01 }
+  set IF_SERIAL(v) { this._.IF_SERIAL = v & 0x01 }
+  set IF_JOYPAD(v) { this._.IF_JOYPAD = v & 0x01 }
   set IF(v) {
     this.IF_VBLANK   = (v & 0x01) >> 0;
     this.IF_LCD_STAT = (v & 0x02) >> 1;
