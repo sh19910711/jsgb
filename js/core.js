@@ -2894,6 +2894,11 @@ class Operations {
       this.cycles = 8;
     }
   }
+
+  RETI() {
+    this.op.RET();
+    this.cycles = 16;
+  }
 }
 
 function zero8(d0, d1, d2) {
