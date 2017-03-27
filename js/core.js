@@ -1918,6 +1918,10 @@ class Operations {
     this.r.FH = 0;
     this.cycles = 4;
   }
+
+  NOP() {
+    this.cycles = 4;
+  }
 }
 
 function zero8(d0, d1, d2) {
