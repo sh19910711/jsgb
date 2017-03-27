@@ -555,6 +555,11 @@ class Operations {
     this.r.A = this.m.read8(this.r.DE);
     this.state = 8;
   }
+
+  LDAss_HL() {
+    this.r.A = this.m.read8(this.r.HL);
+    this.state = 8;
+  }
 }
 
 /*********************************
