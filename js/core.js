@@ -105,6 +105,16 @@ class System {
   get TAC() { return this._.TAC & 0xFF; }
   get DMA() { return this._.DMAj & 0xFF; }
   get IME() { return this._.IME & 0xFF; }
+
+  set P1(v) { this.P1 = v & 0xFF }
+  set SB(v) { this.SB = v & 0xFF }
+  set SC(v) { this.SC = v & 0xFF }
+  set DIV(v) { this.DIV = v & 0xFF }
+  set TIMA(v) { this.TIMA = v & 0xFF }
+  set TMA(v) { this.TMA = v & 0xFF }
+  set TAC(v) { this.TAC = v & 0xFF }
+  set DMA(v) { this.DMA = v & 0xFF }
+  set IME(v) { this.IME = v & 0xFF }
 }
 
 class Operations {
