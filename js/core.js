@@ -3250,8 +3250,10 @@ class Operations {
   }
 
   SETHL(b) {
-    const v = this.m.read8(this.r.HL);
-    this.m.write8(this.r.HL, v | 1 << b);
+    return function() {
+      const v = this.m.read8(this.r.HL);
+      this.m.write8(this.r.HL, v | 1 << b);
+    };
     this.cycles = 16;
   }
 
