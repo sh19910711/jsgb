@@ -2782,6 +2782,17 @@ class Operations {
       this.cycles = 8;
     }
   }
+
+  JRcce_NZ() {
+    const e = signed8(this.m.read16(this.r.PC));
+    this.tick();
+    if (!this.r.FZ) {
+      this.tickn(e);
+      this.cycles = 12;
+    } else {
+      this.cycles = 8;
+    }
+  }
 }
 
 function zero8(d0, d1, d2) {
