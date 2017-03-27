@@ -544,6 +544,12 @@ class Operations {
     this.tick();
     this.cycles = 16;
   }
+
+  //
+  LDAss_BC() {
+    this.r.A = this.m.read8(this.r.BC);
+    this.state = 8;
+  }
 }
 
 /*********************************
