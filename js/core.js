@@ -31,6 +31,7 @@ class Registers {
   get SP() { return this._.SP & 0xFF }
   get PC() { return this._.PC & 0xFF }
   get F() { return (this.FZ << 7 | this.FN << 6 | this.FH << 5 | this.FC << 4) & 0xF0 }
+  get BC() { return (this.B << 8) | this.C) & 0xFFFF }
 
   set A(v) { this._.A = v & 0xFF }
   set B(v) { this._.B = v & 0xFF }
@@ -50,6 +51,10 @@ class Registers {
     this.FN = (v & 0x40) >> 6;
     this.FH = (v & 0x20) >> 5;
     this.FC = (v & 0x10) >> 4;
+  }
+  set BC(v) {
+    this.B = (v & 0xFF00) >> 8;
+    this.C = (v & 0x00FF);
   }
 }
 
