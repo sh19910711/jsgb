@@ -2629,6 +2629,16 @@ class Operations {
     this.cycles = 8;
   }
 
+  RLCr_L() {
+    const r = this.r.L;
+    const v = (this.r.L = (r << 1) & 0xFF | r >> 7);
+    this.r.FZ = v == 0;
+    this.r.FN = 0;
+    this.r.FH = 0;
+    this.r.FC = r & 0x80;
+    this.cycles = 8;
+  }
+
   RLCHL() {
     const r = this.m.read8(this.r.HL);
     const v = (r << 1) & 0xFF | r >> 7;
