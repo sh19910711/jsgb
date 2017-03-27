@@ -847,6 +847,18 @@ class Operations {
     this.r.FC = carry8(d0, d1, d2);
     this.cycles = 4;
   }
+
+  ADCAr_B() {
+    const d0 = this.r.A;
+    const d1 = this.r.B;
+    const d2 = this.r.FC;
+    this.r.A = d0 + d1 + d2;
+    this.r.FZ = zero8(d0, d1, d2);
+    this.r.FN = 0;
+    this.r.FH = halfCarry8(d0, d1, d2);
+    this.r.FC = carry8(d0, d1, d2);
+    this.cycles = 4;
+  }
 }
 
 function zero8(d0, d1, d2) {
