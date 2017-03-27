@@ -2593,6 +2593,13 @@ class Operations {
     this.r.FH = 1;
     this.cycles = 8;
   }
+
+  BITHL(b) {
+    this.r.FZ = !(this.m.read8(this.r.HL) & 1 << b);
+    this.r.FN = 0;
+    this.r.FH = 1;
+    this.cycles = 12;
+  }
 }
 
 function zero8(d0, d1, d2) {
