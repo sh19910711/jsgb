@@ -447,7 +447,8 @@ Echo of 8kB Internal RAM
 -------------------------- 0000 --
 **********************************/
 class RAM {
-  constructor() {
+  constructor(core) {
+    this.core = core;
     this.data = new Array(0x10000);
   }
 }
