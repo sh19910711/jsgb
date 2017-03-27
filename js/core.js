@@ -28,8 +28,8 @@ class Registers {
   get C() { return this._.C & 0xFF }
   get E() { return this._.E & 0xFF }
   get L() { return this._.L & 0xFF }
-  get SP() { return this._.SP & 0xFF }
-  get PC() { return this._.PC & 0xFF }
+  get SP() { return this._.SP & 0xFFFF }
+  get PC() { return this._.PC & 0xFFFF }
   get F() { return (this.FZ << 7 | this.FN << 6 | this.FH << 5 | this.FC << 4) & 0xF0 }
   get BC() { return this.B << 8 | this.C }
   get DE() { return this.D << 8 | this.E }
@@ -46,8 +46,8 @@ class Registers {
   set C(v) { this._.C = v & 0xFF }
   set E(v) { this._.E = v & 0xFF }
   set L(v) { this._.L = v & 0xFF }
-  set SP(v) { this._.SP = v & 0xFF }
-  set PC(v) { this._.PC = v & 0xFF }
+  set SP(v) { this._.SP = v & 0xFFFF }
+  set PC(v) { this._.PC = v & 0xFFFF }
   set F(v) {
     this.FZ = (v & 0x80) >> 7;
     this.FN = (v & 0x40) >> 6;
