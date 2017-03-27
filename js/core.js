@@ -293,6 +293,11 @@ class Operations {
     this.r.L = this.r.B;
     this.clocks = 4;
   }
+
+  LDrr_LD() {
+    this.r.L = this.r.B;
+    this.clocks = 4;
+  }
 }
 
 class Core {
