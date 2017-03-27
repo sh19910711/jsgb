@@ -420,16 +420,16 @@ class LCD {
     };
   }
 
-  get STAT() { return this._.STAT }
-  get SCY() { return this._.SCY }
-  get SCX() { return this._.SCX }
-  get LY() { return this._.LY }
-  get LYC() { return this._.LYC }
-  get BGP() { return this._.BGP }
-  get OBP0() { return this._.OBP0 }
-  get OBP1() { return this._.OBP1 }
-  get WY() { return this._.WY }
-  get WX() { return this._.WX }
+  get STAT() { return this._.STAT & 0xFF }
+  get SCY() { return this._.SCY & 0xFF }
+  get SCX() { return this._.SCX & 0xFF }
+  get LY() { return this._.LY & 0xFF }
+  get LYC() { return this._.LYC & 0xFF }
+  get BGP() { return this._.BGP & 0xFF }
+  get OBP0() { return this._.OBP0 & 0xFF }
+  get OBP1() { return this._.OBP1 & 0xFF }
+  get WY() { return this._.WY & 0xFF }
+  get WX() { return this._.WX & 0xFF }
 
   set STAT(v) { this._.STAT = v & 0xFF }
   set SCY(v) { this._.SCY = v & 0xFF }
