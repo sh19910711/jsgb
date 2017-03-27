@@ -74,6 +74,9 @@ class Operations {
     const cbMap = new Array(0xFF); // 0xCB-prefix
   }
 
+  //
+  // 8-bit loads
+  //
   LDrr_AA() {
     this.r.A = this.r.A;
     this.clocks = 4;
