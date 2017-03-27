@@ -1587,6 +1587,16 @@ class Operations {
     this.r.FC = carry8(r, 1);
     this.cycles = 4;
   }
+
+  INCr_C() {
+    const r = this.r.C;
+    const v = (this.r.C = r + 1);
+    this.r.FZ = v == 0;
+    this.r.FN = 0;
+    this.r.FH = halfCarry8(r, 1);
+    this.r.FC = carry8(r, 1);
+    this.cycles = 4;
+  }
 }
 
 function zero8(d0, d1, d2) {
