@@ -300,6 +300,24 @@ class Operations {
     map[0x6e] = this.LDrHL_L;
     map[0x6f] = this.LDrr_LA;
 
+    // 0x70
+    map[0x70] = this.LDHLr_B;
+    map[0x71] = this.LDHLr_C;
+    map[0x72] = this.LDHLr_D;
+    map[0x73] = this.LDHLr_E;
+    map[0x74] = this.LDHLr_H;
+    map[0x75] = this.LDHLr_L;
+    map[0x76] = this.HALT;
+    map[0x77] = this.LDHLr_A;
+    map[0x78] = this.LDrr_AB;
+    map[0x79] = this.LDrr_AC;
+    map[0x7a] = this.LDrr_AD;
+    map[0x7b] = this.LDrr_AE;
+    map[0x7c] = this.LDrr_AH;
+    map[0x7d] = this.LDrr_AL;
+    map[0x7e] = this.LDrHL_A;
+    map[0x7f] = this.LDrr_AA;
+
     const cbMap = new Array(0xFF); // 0xCB-prefix
   }
 
