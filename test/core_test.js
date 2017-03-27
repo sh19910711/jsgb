@@ -27,6 +27,14 @@ describe('Core', function() {
       it('does not use the lower 4-bits', function() {
         expect(this.core.reg.F & 0x0F).toBeFalsy();
       })
+
+      it('is split into FZ, FN, FH, FC', function() {
+        this.core.reg.F = 0x80 | 0x20;
+        expect(this.core.reg.FZ).toBeTruthy();
+        expect(this.core.reg.FN).toBeFalsy();
+        expect(this.core.reg.FH).toBeTruthy();
+        expect(this.core.reg.FC).toBeFalsy();
+      })
     })
   })
 })
