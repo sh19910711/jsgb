@@ -3265,8 +3265,10 @@ class Operations {
   }
 
   RESr_B(b) {
-    this.r.B = ~(~this.r.B & 0xFF | 1 << b);
-    this.cycles = 8;
+    return function() {
+      this.r.B = ~(~this.r.B & 0xFF | 1 << b);
+      this.cycles = 8;
+    };
   }
 
   RESr_D(b) {
