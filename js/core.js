@@ -1709,6 +1709,18 @@ class Operations {
     this.r.FC = 0;
     this.cycles = 12;
   }
+
+  // 16-bit ALUs
+  ADDHL_BC() {
+    const d0 = this.r.HL;
+    const d1 = this.r.BC;
+    this.r.HL = d0 + d1;
+    this.r.FZ = this.r.FZ; // not affected
+    this.r.FN = 0;
+    this.r.FH = halfCarry16(d0, d1);
+    this.r.FC = carry16(d0, d1);
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
