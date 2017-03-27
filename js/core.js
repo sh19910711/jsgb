@@ -1128,6 +1128,18 @@ class Operations {
     this.r.FC = carrySub8(d0, d1, d2);
     this.cycles = 4;
   }
+
+  SBCr_L() {
+    const d0 = this.r.A;
+    const d1 = this.r.L;
+    const d2 = this.r.FC;
+    this.r.A = d0 - d1 - d2;
+    this.r.FZ = zeroSub8(d0, d1, d2);
+    this.r.FN = 1;
+    this.r.FH = halfCarrySub8(d0, d1, d2);
+    this.r.FC = carrySub8(d0, d1, d2);
+    this.cycles = 4;
+  }
 }
 
 function zero8(d0, d1, d2) {
