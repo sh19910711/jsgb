@@ -2431,6 +2431,16 @@ class Operations {
     this.r.FC = r & 0x01;
     this.cycles = 8;
   }
+
+  SRAr_E() {
+    const r = this.r.E;
+    const v = (this.r.E = r & 0x80 | r >> 1);
+    this.r.FZ = v == 0;
+    this.r.FN = 0;
+    this.r.FH = 0;
+    this.r.FC = r & 0x01;
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
