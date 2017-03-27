@@ -3,7 +3,7 @@ describe('Core', function() {
     this.core = new Core;
   })
 
-  describe('registers', function() {
+  describe('Registers', function() {
     describe('F', function() {
       it('consists of FZ, FN, FH, FC', function() {
         this.core.r.FZ = 1;
