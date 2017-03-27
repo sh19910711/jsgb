@@ -1796,6 +1796,11 @@ class Operations {
     this.r.DE = this.r.DE - 1;
     this.cycles = 8;
   }
+
+  DEC_HL() {
+    this.r.HL = this.r.HL - 1;
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
