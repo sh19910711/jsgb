@@ -68,23 +68,20 @@ class Registers {
   }
 }
 
+class Operations {
+  constructor(core) {
+    this.core = core;
+    const map = new Array(0xFF);
+    const cbMap = new Array(0xFF); // 0xCB-prefix
+  }
+}
+
 class Core {
   constructor() {
     this.r = new Registers;
-    this.initOpMap();
-  }
-
-  initOpMap() {
-    this.opMap = new Array(0xFF);
-    this.opMap[0x00] = this.opNop;
-    this.cbOpMap = new Array(0xFF); // 0xCB-prefix
+    this.op = new Operations(this);
   }
 
   tick() {
-  }
-
-  // operations
-  opNop() {
-    this.cycles = 4;
   }
 }
