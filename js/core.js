@@ -640,6 +640,12 @@ class Operations {
     this.tickn(2);
     this.cycles = 12;
   }
+
+  LDddnn_DE() {
+    this.r.DE = this.m.read16(this.r.PC);
+    this.tickn(2);
+    this.cycles = 12;
+  }
 }
 
 /*********************************
