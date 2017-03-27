@@ -372,6 +372,24 @@ class Operations {
     map[0xae] = this.XORHL;
     map[0xaf] = this.XORr_A;
 
+    // 0xB0
+    map[0xb0] = this.ORr_B;
+    map[0xb1] = this.ORr_C;
+    map[0xb2] = this.ORr_D;
+    map[0xb3] = this.ORr_E;
+    map[0xb4] = this.ORr_H;
+    map[0xb5] = this.ORr_L;
+    map[0xb6] = this.ORHL;
+    map[0xb7] = this.ORr_A;
+    map[0xb8] = this.CPr_B;
+    map[0xb9] = this.CPr_C;
+    map[0xba] = this.CPr_D;
+    map[0xbb] = this.CPr_E;
+    map[0xbc] = this.CPr_H;
+    map[0xbd] = this.CPr_L;
+    map[0xbe] = this.CPHL;
+    map[0xbf] = this.CPr_A;
+
     const cbMap = new Array(0xFF); // 0xCB-prefix
   }
 
