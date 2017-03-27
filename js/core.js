@@ -174,6 +174,8 @@ class Operations {
   constructor(core) {
     const map = new Array(0xFF);
 
+    function nothing() {}
+
     // 0x00
     map[0x00] = this.NOP;
     map[0x01] = this.LDddnn_BC;
