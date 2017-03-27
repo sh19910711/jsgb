@@ -559,6 +559,24 @@ class Operations {
     cbMap[0x4d] = this.BITr_L(1);
     cbMap[0x4e] = this.BITHL(1);
     cbMap[0x4f] = this.BITr_A(1);
+
+    // 0x50
+    cbMap[0x50] = this.BITr_B(2);
+    cbMap[0x51] = this.BITr_C(2);
+    cbMap[0x52] = this.BITr_D(2);
+    cbMap[0x53] = this.BITr_E(2);
+    cbMap[0x54] = this.BITr_H(2);
+    cbMap[0x55] = this.BITr_L(2);
+    cbMap[0x56] = this.BITHL(2);
+    cbMap[0x57] = this.BITr_A(2);
+    cbMap[0x58] = this.BITr_B(3);
+    cbMap[0x59] = this.BITr_C(3);
+    cbMap[0x5a] = this.BITr_D(3);
+    cbMap[0x5b] = this.BITr_E(3);
+    cbMap[0x5c] = this.BITr_H(3);
+    cbMap[0x5d] = this.BITr_L(3);
+    cbMap[0x5e] = this.BITHL(3);
+    cbMap[0x5f] = this.BITr_A(3);
   }
 
   //
