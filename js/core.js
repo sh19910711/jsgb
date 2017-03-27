@@ -1781,6 +1781,11 @@ class Operations {
     this.r.HL = this.r.HL + 1;
     this.cycles = 8;
   }
+
+  INC_SP() {
+    this.r.SP = this.r.SP + 1;
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
