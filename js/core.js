@@ -34,6 +34,7 @@ class Registers {
   get BC() { return this.B << 8 | this.C }
   get DE() { return this.D << 8 | this.E }
   get HL() { return this.H << 8 | this.L }
+  get AF() { return this.A << 8 | this.F }
 
   set A(v) { this._.A = v & 0xFF }
   set B(v) { this._.B = v & 0xFF }
@@ -65,6 +66,10 @@ class Registers {
   set HL(v) {
     this.H = (v & 0xFF00) >> 8;
     this.L = (v & 0x00FF);
+  }
+  set AF(v) {
+    this.A = (v & 0xFF00) >> 8;
+    this.F = (v & 0x00FF);
   }
 }
 
