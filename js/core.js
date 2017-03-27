@@ -703,6 +703,24 @@ class Operations {
     cbMap[0xcd] = this.SETr_L(1);
     cbMap[0xce] = this.SETHL(1);
     cbMap[0xcf] = this.SETr_A(1);
+
+    // 0xD0
+    cbMap[0xd0] = this.SETr_B(2);
+    cbMap[0xd1] = this.SETr_C(2);
+    cbMap[0xd2] = this.SETr_D(2);
+    cbMap[0xd3] = this.SETr_E(2);
+    cbMap[0xd4] = this.SETr_H(2);
+    cbMap[0xd5] = this.SETr_L(2);
+    cbMap[0xd6] = this.SETHL(2);
+    cbMap[0xd7] = this.SETr_A(2);
+    cbMap[0xd8] = this.SETr_B(3);
+    cbMap[0xd9] = this.SETr_C(3);
+    cbMap[0xda] = this.SETr_D(3);
+    cbMap[0xdb] = this.SETr_E(3);
+    cbMap[0xdc] = this.SETr_H(3);
+    cbMap[0xdd] = this.SETr_L(3);
+    cbMap[0xde] = this.SETHL(3);
+    cbMap[0xdf] = this.SETr_A(3);
   }
 
   //
