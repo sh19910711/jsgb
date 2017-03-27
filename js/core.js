@@ -2045,6 +2045,17 @@ class Operations {
     this.r.FC = r & 0x80;
     this.cycles = 8;
   }
+
+  RLCHL() {
+    const r = this.m.read8(this.r.HL);
+    const v = (r << 1) & 0xFF | r >> 7;
+    this.m.write8(this.r.HL, v);
+    this.r.FZ = v == 0;
+    this.r.FN = 0;
+    this.r.FH = 0;
+    this.r.FC = r & 0x80;
+    this.cycles = 16;
+  }
 }
 
 function zero8(d0, d1, d2) {
