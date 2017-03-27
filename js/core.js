@@ -2635,6 +2635,12 @@ class Operations {
     this.r.L = this.r.L | 1 << b;
     this.cycles = 8;
   }
+
+  SETHL(b) {
+    const v = this.m.read8(this.r.HL);
+    this.m.write8(this.r.HL, v | 1 << b);
+    this.cycles = 16;
+  }
 }
 
 function zero8(d0, d1, d2) {
