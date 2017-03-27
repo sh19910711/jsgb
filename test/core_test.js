@@ -52,5 +52,17 @@ describe('Core', function() {
         expect(this.core.r.A).toEqual(0x33);
       })
     })
+
+    describe('8-bit loads ([addr] <= register)', function() {
+      it('puts value into register', function() {
+        this.core.m.data = [0x00, 0x00, 0x00];
+        this.core.r.A = 0x77;
+        this.core.r.HL = 0x0001;
+        this.core.op.LDHLr_A.call(this.core);
+        expect(this.core.m.data[0x0000]).toEqual(0x00);
+        expect(this.core.m.data[0x0001]).toEqual(0x77);
+        expect(this.core.m.data[0x0002]).toEqual(0x00);
+      })
+    })
   })
 })
