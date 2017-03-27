@@ -658,6 +658,12 @@ class Operations {
     this.tickn(2);
     this.cycles = 12;
   }
+
+  LDnnSP() {
+    this.m.write16(this.m.read16(this.r.PC), this.r.SP);
+    this.tickn(2);
+    this.cycles = 12;
+  }
 }
 
 /*********************************
