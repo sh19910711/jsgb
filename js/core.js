@@ -71,6 +71,12 @@ class Registers {
 class Core {
   constructor() {
     this.reg = new Registers;
+    this.initOpMap();
+  }
+
+  initOpMap() {
+    this.opMap = new Array(0xFF);
+    this.cbOpMap = new Array(0xFF); // 0xCB-prefix
   }
 
   tick() {
