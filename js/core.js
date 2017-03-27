@@ -70,9 +70,13 @@ class Registers {
 
 class Operations {
   constructor(core) {
-    this.core = core;
     const map = new Array(0xFF);
     const cbMap = new Array(0xFF); // 0xCB-prefix
+  }
+
+  LDrr_AA() {
+    this.r.A = this.r.A;
+    this.clocks = 4;
   }
 }
 
