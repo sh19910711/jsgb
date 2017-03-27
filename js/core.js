@@ -76,9 +76,15 @@ class Core {
 
   initOpMap() {
     this.opMap = new Array(0xFF);
+    this.opMap[0x00] = this.opNop;
     this.cbOpMap = new Array(0xFF); // 0xCB-prefix
   }
 
   tick() {
+  }
+
+  // operations
+  opNop() {
+    this.cycles = 4;
   }
 }
