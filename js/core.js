@@ -734,6 +734,18 @@ class Operations {
     this.r.A = this.stackPop8();
     this.cycles = 12;
   }
+
+  // 8-bit ALUs
+  ADDAr_A() {
+    const d0 = this.r.A;
+    const d1 = this.r.A;
+    this.r.A = d0 + d1;
+    this.r.FZ = zero8(d0, d1)
+    this.r.FN = 0;
+    this.r.FH = carry8(d0, d1);
+    this.r.FC = halfCarry8(d0, d1);
+    this.cycles = 4;
+  }
 }
 
 function signed8(v) {
