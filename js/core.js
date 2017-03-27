@@ -439,6 +439,12 @@ class Operations {
     this.tick();
     this.clocks = 8;
   }
+
+  LDrn_H() {
+    this.r.H = this.m.read8(this.r.PC);
+    this.tick();
+    this.clocks = 8;
+  }
 }
 
 /*********************************
