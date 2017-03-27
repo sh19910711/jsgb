@@ -1698,6 +1698,17 @@ class Operations {
     this.r.FC = 0;
     this.cycles = 4;
   }
+
+  DECHL() {
+    const r = this.m.read8(this.r.HL);
+    const v = r - 1;
+    this.m.write8(this.r.HL, v);
+    this.r.FZ = v == 0;
+    this.r.FN = 1;
+    this.r.FH = halfCarrySub8(r, 1);
+    this.r.FC = 0;
+    this.cycles = 12;
+  }
 }
 
 function zero8(d0, d1, d2) {
