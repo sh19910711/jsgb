@@ -505,6 +505,24 @@ class Operations {
     cbMap[0x1d] = this.RRr_L;
     cbMap[0x1e] = this.RRHL;
     cbMap[0x1f] = this.RRr_A;
+
+    // 0x20
+    cbMap[0x20] = this.SLAr_B;
+    cbMap[0x21] = this.SLAr_C;
+    cbMap[0x22] = this.SLAr_D;
+    cbMap[0x23] = this.SLAr_E;
+    cbMap[0x24] = this.SLAr_H;
+    cbMap[0x25] = this.SLAr_L;
+    cbMap[0x26] = this.SLAHL;
+    cbMap[0x27] = this.SLAr_A;
+    cbMap[0x28] = this.SRAr_B;
+    cbMap[0x29] = this.SRAr_C;
+    cbMap[0x2a] = this.SRAr_D;
+    cbMap[0x2b] = this.SRAr_E;
+    cbMap[0x2c] = this.SRAr_H;
+    cbMap[0x2d] = this.SRAr_L;
+    cbMap[0x2e] = this.SRAHL;
+    cbMap[0x2f] = this.SRAr_A;
   }
 
   //
