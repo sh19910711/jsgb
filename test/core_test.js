@@ -37,4 +37,20 @@ describe('Core', function() {
       })
     })
   })
+
+  describe('Operations', function() {
+    describe('8-bit loads (register <= value)', function() {
+      it('puts value into register', function() {
+        this.core.m.data = [0x11, 0x22, 0x33];
+        this.core.r.PC = 0x00;
+
+        this.core.op.LDrn_A.call(this.core);
+        expect(this.core.r.A).toEqual(0x11);
+        this.core.op.LDrn_A.call(this.core);
+        expect(this.core.r.A).toEqual(0x22);
+        this.core.op.LDrn_A.call(this.core);
+        expect(this.core.r.A).toEqual(0x33);
+      })
+    })
+  })
 })
