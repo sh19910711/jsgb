@@ -548,44 +548,44 @@ class Operations {
   //
   LDAss_BC() {
     this.r.A = this.m.read8(this.r.BC);
-    this.state = 8;
+    this.cycles = 8;
   }
 
   LDAss_DE() {
     this.r.A = this.m.read8(this.r.DE);
-    this.state = 8;
+    this.cycles = 8;
   }
 
   LDAss_HL() {
     this.r.A = this.m.read8(this.r.HL);
-    this.state = 8;
+    this.cycles = 8;
   }
 
   LDAss_nn() {
     this.r.A = this.m.read8(this.m.read16(this.r.PC));
     this.tickn(2);
-    this.state = 16;
+    this.cycles = 16;
   }
 
   LDddA_BC() {
     this.m.write8(this.r.BC, this.r.A);
-    this.state = 8;
+    this.cycles = 8;
   }
 
   LDddA_DE() {
     this.m.write8(this.r.DE, this.r.A);
-    this.state = 8;
+    this.cycles = 8;
   }
 
   LDddA_HL() {
     this.m.write8(this.r.HL, this.r.A);
-    this.state = 8;
+    this.cycles = 8;
   }
 
   LDddA_nn() {
     this.m.write8(this.read16(this.r.PC), this.r.A);
     this.tickn(2);
-    this.state = 16;
+    this.cycles = 16;
   }
 }
 
