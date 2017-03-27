@@ -542,7 +542,7 @@ class Operations {
   LDHLn() {
     this.m.write8(this.r.HL, this.m.read8(this.r.PC));
     this.tick();
-    this.cycles = 8;
+    this.cycles = 16;
   }
 }
 
