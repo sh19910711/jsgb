@@ -494,7 +494,10 @@ class LCD {
 
 class Core {
   constructor() {
-    this.r = new Registers;
+    this.r = new Registers(this);
+    this.m = new RAM(this);
+    this.sys = new System(this);
+    this.lcd = new LCD(this);
     this.op = new Operations(this);
   }
 
