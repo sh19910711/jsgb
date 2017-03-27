@@ -3229,8 +3229,10 @@ class Operations {
   }
 
   SETr_C(b) {
-    this.r.C = this.r.C | 1 << b;
-    this.cycles = 8;
+    return function() {
+      this.r.C = this.r.C | 1 << b;
+      this.cycles = 8;
+    };
   }
 
   SETr_E(b) {
