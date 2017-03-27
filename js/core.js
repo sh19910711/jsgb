@@ -2600,6 +2600,11 @@ class Operations {
     this.r.FH = 1;
     this.cycles = 12;
   }
+
+  SETr_A(b) {
+    this.r.A = this.r.A | 1 << b;
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
