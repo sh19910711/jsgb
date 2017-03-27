@@ -1922,6 +1922,10 @@ class Operations {
   NOP() {
     this.cycles = 4;
   }
+
+  HALT() { // TODO: implement me
+    this.cycles = 4;
+  }
 }
 
 function zero8(d0, d1, d2) {
