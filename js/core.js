@@ -2625,6 +2625,11 @@ class Operations {
     this.r.C = this.r.C | 1 << b;
     this.cycles = 8;
   }
+
+  SETr_E(b) {
+    this.r.E = this.r.E | 1 << b;
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
