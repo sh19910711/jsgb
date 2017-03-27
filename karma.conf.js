@@ -62,7 +62,7 @@ module.exports = function(config) {
         base: 'Chrome',
         flags: ['--no-sandbox']
       }
-    }
+    },
 
 
     // Continuous Integration mode
