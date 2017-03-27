@@ -2749,6 +2749,17 @@ class Operations {
     this.tickn(1 + e);
     this.cycles = 12;
   }
+
+  JRcce_C() {
+    const e = signed8(this.m.read16(this.r.PC));
+    this.tick();
+    if (this.r.FC) {
+      this.tickn(e);
+      this.cycles = 12;
+    } else {
+      this.cycles = 8;
+    }
+  }
 }
 
 function zero8(d0, d1, d2) {
