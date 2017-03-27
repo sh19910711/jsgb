@@ -681,6 +681,11 @@ class Operations {
     this.r.FC = carry16(this.r.SP, e);
     this.cycles = 12;
   }
+
+  push8(v) {
+    this.r.SP = this.r.SP - 1;
+    this.m.write8(this.r.SP, v);
+  }
 }
 
 function signed8(v) {
