@@ -420,6 +420,13 @@ class Operations {
     this.r.L = this.r.L;
     this.clocks = 4;
   }
+
+  // register <= value
+  LDrn_A() {
+    this.r.A = this.m.read8(this.r.PC);
+    this.tick();
+    this.clocks = 8;
+  }
 }
 
 /*********************************
