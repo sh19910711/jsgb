@@ -3143,10 +3143,12 @@ class Operations {
 
   // Restarts
   RST_f(f) {
-    this.stackPush8((this.r.PC & 0xFF00) >> 8);
-    this.stackPush8(this.r.PC & 0x00FF);
-    this.r.PC = f & 0x00FF;
-    this.cycles = 16;
+    return function() {
+      this.stackPush8((this.r.PC & 0xFF00) >> 8);
+      this.stackPush8(this.r.PC & 0x00FF);
+      this.r.PC = f & 0x00FF;
+      this.cycles = 16;
+    }
   }
 
   RET() {
