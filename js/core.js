@@ -108,6 +108,7 @@ class System {
   get IE_VBLANK() { return this._.IE_VBLANK & 0x01 }
   get IE_LCD_STAT() { return this._.IE_LCD_STAT & 0x01 }
   get IE_TIMER() { return this._.IE_TIMER & 0x01 }
+  get IE_SERIAL() { return this._.IE_SERIAL & 0x01 }
   get IE_JOYPAD() { return this._.IE_JOYPAD & 0x01 }
   get IE() {
     return this.IE_VBLANK << 0
@@ -126,6 +127,18 @@ class System {
   set TAC(v) { this.TAC = v & 0xFF }
   set DMA(v) { this.DMA = v & 0xFF }
   set IME(v) { this.IME = v & 0xFF }
+  set IE_VBLANK(v) { this.IE_VBLANK = v & 0x01 }
+  set IE_LCD_STAT(v) { this.IE_LCD_STAT = v & 0x01 }
+  set IE_TIMER(v) { this.IE_TIMER = v & 0x01 }
+  set IE_SERIAL(v) { this.IE_SERIAL = v & 0x01 }
+  set IE_JOYPAD(v) { this.IE_JOYPAD = v & 0x01 }
+  set IE(v) {
+    this.IE_VBLANK   = (v & 0x01) >> 0;
+    this.IE_LCD_STAT = (v & 0x02) >> 1;
+    this.IE_TIMER    = (v & 0x04) >> 2;
+    this.IE_SERIAL   = (v & 0x08) >> 3;
+    this.IE_JOYPAD   = (v & 0x10) >> 4;
+  }
 }
 
 class Operations {
