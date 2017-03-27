@@ -9,7 +9,8 @@
     "karma-jasmine-html-reporter": "^0.2.2"
   },
   "scripts": {
-    "test": "karma start"
+    "test": "karma start",
+    "travis/test": "karma start --single-run --browsers ChromeHeadless"
   },
   "main": "index.js",
   "author": "Hiroyuki Sano <sh19910711@gmail.com>",
