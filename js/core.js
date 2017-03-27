@@ -1721,6 +1721,17 @@ class Operations {
     this.r.FC = carry16(d0, d1);
     this.cycles = 8;
   }
+
+  ADDHL_DE() {
+    const d0 = this.r.HL;
+    const d1 = this.r.DE;
+    this.r.HL = d0 + d1;
+    this.r.FZ = this.r.FZ; // not affected
+    this.r.FN = 0;
+    this.r.FH = halfCarry16(d0, d1);
+    this.r.FC = carry16(d0, d1);
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
