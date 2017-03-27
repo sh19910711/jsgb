@@ -355,6 +355,45 @@ class RAM {
   }
 }
 
+class LCD {
+  constructor() {
+    this._ = {
+      STAT: 0,
+      SCY: 0,
+      SCX: 0,
+      LY: 0,
+      LYC: 0,
+      BGP: 0,
+      OBP0: 0,
+      OBP1: 0,
+      WY: 0,
+      WX: 0,
+    };
+  }
+
+  get STAT() { return this._.STAT }
+  get SCY() { return this._.SCY }
+  get SCX() { return this._.SCX }
+  get LY() { return this._.LY }
+  get LYC() { return this._.LYC }
+  get BGP() { return this._.BGP }
+  get OBP0() { return this._.OBP0 }
+  get OBP1() { return this._.OBP1 }
+  get WY() { return this._.WY }
+  get WX() { return this._.WX }
+
+  set STAT(v) { this._.STAT = v & 0xFF }
+  set SCY(v) { this._.SCY = v & 0xFF }
+  set SCX(v) { this._.SCX = v & 0xFF }
+  set LY(v) { this._.LY = v & 0xFF }
+  set LYC(v) { this._.LYC = v & 0xFF }
+  set BGP(v) { this._.BGP = v & 0xFF }
+  set OBP0(v) { this._.OBP0 = v & 0xFF }
+  set OBP1(v) { this._.OBP1 = v & 0xFF }
+  set WY(v) { this._.WY = v & 0xFF }
+  set WX(v) { this._.WX = v & 0xFF }
+}
+
 class Core {
   constructor() {
     this.r = new Registers;
