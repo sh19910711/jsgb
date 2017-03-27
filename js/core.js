@@ -3243,8 +3243,10 @@ class Operations {
   }
 
   SETr_L(b) {
-    this.r.L = this.r.L | 1 << b;
-    this.cycles = 8;
+    return function() {
+      this.r.L = this.r.L | 1 << b;
+      this.cycles = 8;
+    };
   }
 
   SETHL(b) {
