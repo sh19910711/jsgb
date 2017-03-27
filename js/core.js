@@ -330,5 +330,6 @@ class Core {
   }
 
   tick() {
+    this.r.PC = this.r.PC + 1;
   }
 }
