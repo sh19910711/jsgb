@@ -318,6 +318,24 @@ class Operations {
     map[0x7e] = this.LDrHL_A;
     map[0x7f] = this.LDrr_AA;
 
+    // 0x80
+    map[0x80] = this.ADDAr_B;
+    map[0x81] = this.ADDAr_C;
+    map[0x82] = this.ADDAr_D;
+    map[0x83] = this.ADDAr_E;
+    map[0x84] = this.ADDAr_H;
+    map[0x85] = this.ADDAr_L;
+    map[0x86] = this.ADDAHL;
+    map[0x87] = this.ADDAr_A;
+    map[0x88] = this.ADCAr_B;
+    map[0x89] = this.ADCAr_C;
+    map[0x8a] = this.ADCAr_D;
+    map[0x8b] = this.ADCAr_E;
+    map[0x8c] = this.ADCAr_H;
+    map[0x8d] = this.ADCAr_H;
+    map[0x8e] = this.ADCAHL;
+    map[0x8f] = this.ADCAr_A;
+
     const cbMap = new Array(0xFF); // 0xCB-prefix
   }
 
