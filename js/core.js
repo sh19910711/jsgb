@@ -835,10 +835,23 @@ class Operations {
     this.r.FC = carry8(d0, d1);
     this.cycles = 8;
   }
+
+  ADCAr_A() {
+    const d0 = this.r.A;
+    const d1 = this.r.A;
+    const d2 = this.r.FC;
+    this.r.A = d0 + d1 + d2;
+    this.r.FZ = zero8(d0, d1, d2);
+    this.r.FN = 0;
+    this.r.FH = halfCarry8(d0, d1, d2);
+    this.r.FC = carry8(d0, d1, d2);
+    this.cycles = 4;
+  }
 }
 
-function zero8(d0, d1) {
-  return (d1 + d2) & 0xFF == 0;
+function zero8(d0, d1, d2) {
+  d2 = d2 || 0;
+  return (d0 + d1 + d2) & 0xFF == 0;
 }
 
 function signed8(v) {
