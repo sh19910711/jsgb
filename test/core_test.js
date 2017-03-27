@@ -24,7 +24,7 @@ describe('Core', function() {
         expect(this.core.reg.F & 0x10).toBeTruthy();
       })
 
-      it('does not use the last 4-bits', function() {
+      it('does not use the lower 4-bits', function() {
         expect(this.core.reg.F & 0x0F).toBeFalsy();
       })
     })
