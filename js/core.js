@@ -2738,6 +2738,11 @@ class Operations {
       this.cycles = 12;
     }
   }
+
+  JPHL() {
+    this.r.PC = this.r.HL;
+    this.cycles = 4;
+  }
 }
 
 function zero8(d0, d1, d2) {
