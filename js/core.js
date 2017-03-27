@@ -468,6 +468,11 @@ class Operations {
     this.r.A = this.m.read8(this.r.HL);
     this.cycles = 8;
   }
+
+  LDrHL_B() {
+    this.r.B = this.m.read8(this.r.HL);
+    this.cycles = 8;
+  }
 }
 
 /*********************************
