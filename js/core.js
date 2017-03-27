@@ -390,6 +390,28 @@ class Operations {
     map[0xbe] = this.CPHL;
     map[0xbf] = this.CPr_A;
 
+    // 0xC0
+    map[0xc0] = this.RETcc_NZ;
+    map[0xc1] = this.POP_BC;
+    map[0xc2] = this.JPccnn_NZ;
+    map[0xc3] = this.JPnn;
+    map[0xc4] = this.CALLccnn_NZ;
+    map[0xc5] = this.PUSH_BC;
+    map[0xc6] = this.ADDAn;
+    map[0xc7] = this.RST_f(0x00);
+    map[0xc8] = this.RETcc_Z;
+    map[0xc9] = this.RET;
+    map[0xca] = this.JPccnn_Z;
+    map[0xcb] = function() {
+      const op = this.m.read8(this.r.PC);
+      this.tick();
+      // TODO: call cbMap
+    };
+    map[0xcc] = this.CALLccnn_Z;
+    map[0xcd] = this.CALLnn;
+    map[0xce] = this.SBCn;
+    map[0xcf] = this.RST_f(0x08);
+
     const cbMap = new Array(0xFF); // 0xCB-prefix
   }
 
