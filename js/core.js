@@ -550,6 +550,11 @@ class Operations {
     this.r.A = this.m.read8(this.r.BC);
     this.state = 8;
   }
+
+  LDAss_DE() {
+    this.r.A = this.m.read8(this.r.DE);
+    this.state = 8;
+  }
 }
 
 /*********************************
