@@ -451,6 +451,44 @@ class RAM {
     this.core = core;
     this.data = new Array(0x10000);
   }
+
+  read8() {
+    if ((addr & 0xFF00) == 0xFF00) {
+      switch (addr & 0xFF) {
+      case 0x00: return this.core.sys.P1;
+      case 0x01: return this.core.sys.SB;
+      case 0x02: return this.core.sys.SC;
+      case 0x04: return this.core.sys.DIV;
+      case 0x05: return this.core.sys.TIMA;
+      case 0x06: return this.core.sys.TMA;
+      case 0x07: return this.core.sys.TAC;
+      case 0x0F: return this.core.sys.IF;
+      case 0x40: return this.core.lcd.LCDC;
+      case 0x41: return this.core.lcd.STAT;
+      case 0x42: return this.core.lcd.SCY;
+      case 0x43: return this.core.lcd.SCX;
+      case 0x44: return this.core.lcd.LY;
+      case 0x45: return this.core.lcd.LYC;
+      case 0x46: return this.core.sys.DMA;
+      case 0x47: return this.core.lcd.BGP;
+      case 0x48: return this.core.lcd.OBP0;
+      case 0x49: return this.core.lcd.OBP1;
+      case 0x4A: return this.core.lcd.WY;
+      case 0x4B: return this.core.lcd.WX;
+      case 0xFF: return this.system.IE;
+      }
+    }
+
+    if (addr >= 0xC000 && addr < 0xDE00) {
+      return mem[addr]; // TODO
+    }
+
+    if (addr >= 0xE000 && addr < 0xFE00) {
+      return mem[addr - 0x2000]; // TODO
+    }
+
+    return mem[addr];
+  }
 }
 
 class LCD {
