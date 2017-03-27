@@ -592,6 +592,11 @@ class Operations {
     this.r.A = this.m.read8(0xFF00 | this.r.C);
     this.cycles = 8;
   }
+
+  LDCA() {
+    this.m.write8(0xFF00 | this.r.C, this.r.A);
+    this.cycles = 8;
+  }
 }
 
 /*********************************
