@@ -451,6 +451,12 @@ class Operations {
     this.tick();
     this.clocks = 8;
   }
+
+  LDrn_E() {
+    this.r.E = this.m.read8(this.r.PC);
+    this.tick();
+    this.clocks = 8;
+  }
 }
 
 /*********************************
