@@ -2793,6 +2793,14 @@ class Operations {
       this.cycles = 8;
     }
   }
+
+  // Calls
+  CALLnn_int(addr) {
+    this.stackPush8((this.r.PC & 0xFF00) >> 8);
+    this.stackPush8(this.r.PC & 0x00FF);
+    this.r.PC = addr;
+    this.cycles = 24;
+  }
 }
 
 function zero8(d0, d1, d2) {
