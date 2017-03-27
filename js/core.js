@@ -587,6 +587,11 @@ class Operations {
     this.tickn(2);
     this.cycles = 16;
   }
+
+  LDAC() {
+    this.r.A = this.m.read8(0xFF00 | this.r.C);
+    this.cycles = 8;
+  }
 }
 
 /*********************************
