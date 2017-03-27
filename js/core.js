@@ -1165,6 +1165,17 @@ class Operations {
     this.r.FC = carrySub8(d0, d1, d2);
     this.cycles = 8;
   }
+
+  ANDr_A() {
+    const d0 = this.r.A;
+    const d1 = this.r.A;
+    this.r.A = d0 & d1;
+    this.r.FZ = (d0 & d1) == 0;
+    this.r.FN = 0;
+    this.r.FH = 1;
+    this.r.FC = 0;
+    this.cycles = 4;
+  }
 }
 
 function zero8(d0, d1, d2) {
