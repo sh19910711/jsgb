@@ -1242,6 +1242,18 @@ class Operations {
     this.r.FC = 0;
     this.cycles = 4;
   }
+
+  ANDn() {
+    const d0 = this.r.A;
+    const d1 = this.m.read8(this.r.PC);
+    this.tick();
+    this.r.A = d0 & d1;
+    this.r.FZ = (d0 & d1) == 0;
+    this.r.FN = 0;
+    this.r.FH = 1;
+    this.r.FC = 0;
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
