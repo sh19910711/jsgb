@@ -1510,6 +1510,15 @@ class Operations {
     this.r.FC = carrySub8(this.r.A, v);
     this.cycles = 4;
   }
+
+  CPr_E() {
+    const v = this.r.E;
+    this.r.FZ = (this.r.A - v) == 0;
+    this.r.FN = 1;
+    this.r.FH = halfCarrySub8(this.r.A, v);
+    this.r.FC = carrySub8(this.r.A, v);
+    this.cycles = 4;
+  }
 }
 
 function zero8(d0, d1, d2) {
