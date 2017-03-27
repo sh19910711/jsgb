@@ -174,6 +174,8 @@ class Operations {
   //
   // 8-bit loads
   //
+
+  // register <= register
   LDrr_AA() {
     this.r.A = this.r.A;
     this.clocks = 4;
