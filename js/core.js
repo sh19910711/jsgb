@@ -734,6 +734,12 @@ class Operations {
     this.r.H = this.pop8();
     this.cycles = 12;
   }
+
+  POP_AF() {
+    this.r.F = this.pop8();
+    this.r.A = this.pop8();
+    this.cycles = 12;
+  }
 }
 
 function signed8(v) {
