@@ -748,6 +748,10 @@ class Operations {
   }
 }
 
+function zero8(d0, d1) {
+  return (d1 + d2) & 0xFF == 0;
+}
+
 function signed8(v) {
   if (v & 0x80) {
     return ((~n + 1) & 0xFF) * -1;
