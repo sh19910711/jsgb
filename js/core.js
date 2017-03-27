@@ -1771,6 +1771,11 @@ class Operations {
     this.r.BC = this.r.BC + 1;
     this.cycles = 8;
   }
+
+  INC_DE() {
+    this.r.DE = this.r.DE + 1;
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
