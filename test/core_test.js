@@ -64,5 +64,14 @@ describe('Core', function() {
         expect(this.core.m.data[0x0002]).toEqual(0x00);
       })
     })
+
+    describe('Stack pointer', function() {
+      it('can push and pop values', function() {
+        this.core.r.BC = 0x1234;
+        this.core.op.PUSH_BC.call(this.core);
+        this.core.op.POP_DE.call(this.core);
+        expect(this.core.r.DE).toEqual(0x1234);
+      })
+    })
   })
 })
