@@ -615,6 +615,12 @@ class Operations {
     this.r.HL = this.r.HL + 1;
     this.cycles = 8;
   }
+
+  LDIHLA() {
+    this.m.write8(this.r.HL, this.r.A);
+    this.r.HL = this.r.HL + 1;
+    this.cycles = 8;
+  }
 }
 
 /*********************************
