@@ -687,62 +687,51 @@ class Operations {
     this.cycles = 12;
   }
 
-  push8(v) {
-    this.r.SP = this.r.SP - 1;
-    this.m.write8(this.r.SP, v);
-  }
-
-  pop8() {
-    const v = this.m.read8(this.r.SP);
-    this.r.SP = this.r.SP + 1;
-    return v;
-  }
-
   PUSH_BC() {
-    this.push8(this.r.B);
-    this.push8(this.r.C);
+    this.stackPush8(this.r.B);
+    this.stackPush8(this.r.C);
     this.cycles = 16;
   }
 
   PUSH_DE() {
-    this.push8(this.r.D);
-    this.push8(this.r.E);
+    this.stackPush8(this.r.D);
+    this.stackPush8(this.r.E);
     this.cycles = 16;
   }
 
   PUSH_HL() {
-    this.push8(this.r.H);
-    this.push8(this.r.L);
+    this.stackPush8(this.r.H);
+    this.stackPush8(this.r.L);
     this.cycles = 16;
   }
 
   PUSH_AF() {
-    this.push8(this.r.A);
-    this.push8(this.r.F);
+    this.stackPush8(this.r.A);
+    this.stackPush8(this.r.F);
     this.cycles = 16;
   }
 
   POP_BC() {
-    this.r.C = this.pop8();
-    this.r.B = this.pop8();
+    this.r.C = this.stackPop8();
+    this.r.B = this.stackPop8();
     this.cycles = 12;
   }
 
   POP_DE() {
-    this.r.E = this.pop8();
-    this.r.D = this.pop8();
+    this.r.E = this.stackPop8();
+    this.r.D = this.stackPop8();
     this.cycles = 12;
   }
 
   POP_HL() {
-    this.r.L = this.pop8();
-    this.r.H = this.pop8();
+    this.r.L = this.stackPop8();
+    this.r.H = this.stackPop8();
     this.cycles = 12;
   }
 
   POP_AF() {
-    this.r.F = this.pop8();
-    this.r.A = this.pop8();
+    this.r.F = this.stackPop8();
+    this.r.A = this.stackPop8();
     this.cycles = 12;
   }
 }
@@ -820,7 +809,7 @@ class RAM {
       case 0x49: return this.core.lcd.OBP1;
       case 0x4A: return this.core.lcd.WY;
       case 0x4B: return this.core.lcd.WX;
-      case 0xFF: return this.system.IE;
+      case 0xFF: return this.core.sys.IE;
       }
     }
 
@@ -939,5 +928,16 @@ class Core {
 
   tickn(n) {
     this.r.PC = this.r.PC + n;
+  }
+
+  stackPush8(v) {
+    this.r.SP = this.r.SP - 1;
+    this.m.write8(this.r.SP, v);
+  }
+
+  stackPop8() {
+    const v = this.m.read8(this.r.SP);
+    this.r.SP = this.r.SP + 1;
+    return v;
   }
 }
