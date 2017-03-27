@@ -581,6 +581,12 @@ class Operations {
     this.m.write8(this.r.HL, this.r.A);
     this.state = 8;
   }
+
+  LDddA_nn() {
+    this.m.write8(this.read16(this.r.PC), this.r.A);
+    this.tickn(2);
+    this.state = 16;
+  }
 }
 
 /*********************************
