@@ -533,6 +533,11 @@ class Operations {
     this.m.write8(this.r.HL, this.r.E);
     this.cycles = 8;
   }
+
+  LDHLr_L() {
+    this.m.write8(this.r.HL, this.r.L);
+    this.cycles = 8;
+  }
 }
 
 /*********************************
