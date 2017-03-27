@@ -178,290 +178,290 @@ class Operations {
   // register <= register
   LDrr_AA() {
     this.r.A = this.r.A;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_AB() {
     this.r.A = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_AD() {
     this.r.A = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_AH() {
     this.r.A = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_AC() {
     this.r.A = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_AE() {
     this.r.A = this.r.E;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_AL() {
     this.r.A = this.r.L;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_BA() {
     this.r.B = this.r.A;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_BB() {
     this.r.B = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_BD() {
     this.r.B = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_BH() {
     this.r.B = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_BC() {
     this.r.B = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_BE() {
     this.r.B = this.r.E;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_BL() {
     this.r.B = this.r.L;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_DA() {
     this.r.D = this.r.A;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_DB() {
     this.r.D = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_DD() {
     this.r.D = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_DH() {
     this.r.D = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_DC() {
     this.r.D = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_DE() {
     this.r.D = this.r.E;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_DL() {
     this.r.D = this.r.L;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_HA() {
     this.r.H = this.r.A;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_HB() {
     this.r.H = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_HD() {
     this.r.H = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_HH() {
     this.r.H = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_HC() {
     this.r.H = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_HE() {
     this.r.H = this.r.E;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_HL() {
     this.r.H = this.r.L;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_CA() {
     this.r.C = this.r.A;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_CB() {
     this.r.C = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_CD() {
     this.r.C = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_CH() {
     this.r.C = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_CC() {
     this.r.C = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_CE() {
     this.r.C = this.r.E;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_CL() {
     this.r.C = this.r.L;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_EA() {
     this.r.E = this.r.A;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_EB() {
     this.r.E = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_ED() {
     this.r.E = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_EH() {
     this.r.E = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_EC() {
     this.r.E = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_EE() {
     this.r.E = this.r.E;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_EL() {
     this.r.E = this.r.L;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_LA() {
     this.r.L = this.r.A;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_LB() {
     this.r.L = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_LD() {
     this.r.L = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_LH() {
     this.r.L = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_LC() {
     this.r.L = this.r.B;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_LE() {
     this.r.L = this.r.E;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   LDrr_LL() {
     this.r.L = this.r.L;
-    this.clocks = 4;
+    this.cycles = 4;
   }
 
   // register <= value
   LDrn_A() {
     this.r.A = this.m.read8(this.r.PC);
     this.tick();
-    this.clocks = 8;
+    this.cycles = 8;
   }
 
   LDrn_B() {
     this.r.B = this.m.read8(this.r.PC);
     this.tick();
-    this.clocks = 8;
+    this.cycles = 8;
   }
 
   LDrn_D() {
     this.r.D = this.m.read8(this.r.PC);
     this.tick();
-    this.clocks = 8;
+    this.cycles = 8;
   }
 
   LDrn_H() {
     this.r.H = this.m.read8(this.r.PC);
     this.tick();
-    this.clocks = 8;
+    this.cycles = 8;
   }
 
   LDrn_C() {
     this.r.C = this.m.read8(this.r.PC);
     this.tick();
-    this.clocks = 8;
+    this.cycles = 8;
   }
 
   LDrn_E() {
     this.r.E = this.m.read8(this.r.PC);
     this.tick();
-    this.clocks = 8;
+    this.cycles = 8;
   }
 
   LDrn_L() {
     this.r.L = this.m.read8(this.r.PC);
     this.tick();
-    this.clocks = 8;
+    this.cycles = 8;
   }
 }
 
