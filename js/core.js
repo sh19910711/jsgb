@@ -31,8 +31,9 @@ class Registers {
   get SP() { return this._.SP & 0xFF }
   get PC() { return this._.PC & 0xFF }
   get F() { return (this.FZ << 7 | this.FN << 6 | this.FH << 5 | this.FC << 4) & 0xF0 }
-  get BC() { return this.B << 8) | this.C }
-  get DE() { return this.D << 8) | this.E }
+  get BC() { return this.B << 8 | this.C }
+  get DE() { return this.D << 8 | this.E }
+  get HL() { return this.H << 8 | this.L }
 
   set A(v) { this._.A = v & 0xFF }
   set B(v) { this._.B = v & 0xFF }
@@ -60,6 +61,10 @@ class Registers {
   set DE(v) {
     this.D = (v & 0xFF00) >> 8;
     this.E = (v & 0x00FF);
+  }
+  set HL(v) {
+    this.H = (v & 0xFF00) >> 8;
+    this.L = (v & 0x00FF);
   }
 }
 
