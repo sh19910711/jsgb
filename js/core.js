@@ -574,6 +574,46 @@ class RAM {
 
     return this.data[addr];
   }
+
+  write8(addr, v) {
+    v &= 0xFF;
+
+    if ((addr & 0xFF00) == 0xFF00) {
+      switch (addr & 0xFF) {
+      case 0x00: return this.core.sys.P1 = v;
+      case 0x01: return this.core.sys.SB = v;
+      case 0x02: return this.core.sys.SC = v;
+      case 0x04: return this.core.sys.DIV = v;
+      case 0x05: return this.core.sys.TIMA = v;
+      case 0x06: return this.core.sys.TMA = v;
+      case 0x07: return this.core.sys.TAC = v;
+      case 0x0F: return this.core.sys.IF = v;
+      case 0x40: return this.core.lcd.LCDC = v;
+      case 0x41: return this.core.lcd.STAT = v;
+      case 0x42: return this.core.lcd.SCY = v;
+      case 0x43: return this.core.lcd.SCX = v;
+      case 0x44: return this.core.lcd.LY = v;
+      case 0x45: return this.core.lcd.LYC = v;
+      case 0x46: return this.core.sys.DMA = v;
+      case 0x47: return this.core.lcd.BGP = v;
+      case 0x48: return this.core.lcd.OBP0 = v;
+      case 0x49: return this.core.lcd.OBP1 = v;
+      case 0x4A: return this.core.lcd.WY = v;
+      case 0x4B: return this.core.lcd.WX = v;
+      case 0xFF: return this.core.sys.IE = v;
+      }
+    }
+
+    if (addr >= 0xC000 && addr < 0xDE00) {
+      return this.data[addr] = v; // TODO
+    }
+
+    if (addr >= 0xE000 && addr < 0xFE00) {
+      return this.data[addr - 0x2000] = v;
+    }
+
+    return this.data[addr] = v;
+  }
 }
 
 class LCD {
