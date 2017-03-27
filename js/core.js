@@ -71,7 +71,40 @@ class Registers {
 class System {
   constructor(core) {
     this.core = core;
+    this._ = {
+      P1: 0,
+      SB: 0,
+      SC: 0,
+      DIV: 0,
+      TIMA: 0,
+      TMA: 0,
+      TAC: 0,
+      DMA: 0,
+      IME: 0,
+
+      // interrupts
+      IE_VBLANK: 0,
+      IE_LCD_STAT: 0,
+      IE_TIMER: 0,
+      IE_SERIAL: 0,
+      IE_JOYPAD: 0,
+      IF_VBLANK: 0,
+      IF_LCD_STAT: 0,
+      IF_TIMER: 0,
+      IF_SERIAL: 0,
+      IF_JOYPAD: 0,
+    };
   }
+
+  get P1() { return this._.P1 & 0xFF; }
+  get SB() { return this._.SB & 0xFF; }
+  get SC() { return this._.SC & 0xFF; }
+  get DIV() { return this._.DIV & 0xFF; }
+  get TIMA() { return this._.TIMA & 0xFF; }
+  get TMA() { return this._.TMA & 0xFF; }
+  get TAC() { return this._.TAC & 0xFF; }
+  get DMA() { return this._.DMAj & 0xFF; }
+  get IME() { return this._.IME & 0xFF; }
 }
 
 class Operations {
