@@ -1897,6 +1897,13 @@ class Operations {
     this.r.FC = v > 0xFF;
     this.cycles = 4;
   }
+
+  CPL() {
+    this.r.A = ~this.r.A;
+    this.r.FN = 1;
+    this.r.FH = 1;
+    this.cycles = 4;
+  }
 }
 
 function zero8(d0, d1, d2) {
