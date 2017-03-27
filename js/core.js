@@ -70,7 +70,7 @@ class Registers {
 
 class Core {
   constructor() {
-    this.reg = new Registers;
+    this.r = new Registers;
     this.initOpMap();
   }
 
