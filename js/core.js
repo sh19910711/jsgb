@@ -2743,6 +2743,12 @@ class Operations {
     this.r.PC = this.r.HL;
     this.cycles = 4;
   }
+
+  JRe() {
+    const e = signed8(this.m.read16(this.r.PC));
+    this.tickn(1 + e);
+    this.cycles = 12;
+  }
 }
 
 function zero8(d0, d1, d2) {
