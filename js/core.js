@@ -439,7 +439,7 @@ class Operations {
     map[0xe3] = nothing;
     map[0xe4] = nothing;
     map[0xe5] = this.PUSH_HL;
-    map[0xe6] = this.ANDrn;
+    map[0xe6] = this.ANDn;
     map[0xe7] = this.RST_f(0x20);
     map[0xe8] = this.ADDSPe;
     map[0xe9] = this.JPHL;
