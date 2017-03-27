@@ -990,6 +990,11 @@ function carrySub8() {
   return d0 < d1 + d2;
 }
 
+function halfCarrySub8() {
+  d2 = d2 || 0;
+  return d0 & 0x0F < d1 & 0x0F + d2 & 0x0F;
+}
+
 function carry16(d0, d1, d2) {
   d2 = d2 || 0;
   return d0 + d1 + d2 > 0xFFFF;
