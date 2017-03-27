@@ -692,6 +692,12 @@ class Operations {
     this.r.SP = this.r.SP + 1;
     return v;
   }
+
+  PUSH_BC() {
+    this.push8(this.r.B);
+    this.push8(this.r.C);
+    this.cycles = 16;
+  }
 }
 
 function signed8(v) {
