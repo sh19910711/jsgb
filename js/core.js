@@ -669,6 +669,35 @@ class Operations {
     this.r.SP = this.r.HL;
     this.cycles = 8;
   }
+
+  LDHLSPe() {
+    const e = this.m.read8(this.r.PC);
+    this.tick();
+    const se = signed8(e);
+    this.r.HL = this.r.SP + se;
+    this.r.FZ = 0;
+    this.r.FN = 0;
+    this.r.FH = halfCarry16(this.r.SP, e);
+    this.r.FC = carry16(this.r.SP, e);
+  }
+}
+
+function signed8(v) {
+  if (v & 0x80) {
+    return ((~n + 1) & 0xFF) * -1;
+  } else {
+    return n;
+  }
+}
+
+function carry16(d0, d1, d2) {
+  d2 = d2 || 0;
+  return d0 + d1 + d2 > 0xFFFF;
+}
+
+function halfCarry16(d0, d1, d2) {
+  d2 = d2 || 0;
+  return d0 + d1 + d2 > 0x0FFF;
 }
 
 /*********************************
