@@ -1888,6 +1888,15 @@ class Operations {
     this.r.FC = 0;
     this.cycles = 8;
   }
+
+  DAA() { // TODO: check how to use
+    const v = parseInt(this.r.A.toString(16), 10);
+    this.r.A = v;
+    this.r.FZ = v == 0;
+    this.r.FH = 0;
+    this.r.FC = v > 0xFF;
+    this.cycles = 4;
+  }
 }
 
 function zero8(d0, d1, d2) {
