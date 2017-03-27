@@ -633,6 +633,13 @@ class Operations {
     this.tick();
     this.cycles = 12;
   }
+
+  // 16-bit loads
+  LDddnn_BC() {
+    this.r.BC = this.m.read16(this.r.PC);
+    this.tickn(2);
+    this.cycles = 12;
+  }
 }
 
 /*********************************
