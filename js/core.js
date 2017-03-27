@@ -704,6 +704,12 @@ class Operations {
     this.push8(this.r.E);
     this.cycles = 16;
   }
+
+  PUSH_HL() {
+    this.push8(this.r.H);
+    this.push8(this.r.L);
+    this.cycles = 16;
+  }
 }
 
 function signed8(v) {
