@@ -31,6 +31,19 @@ class Registers {
   get L() { return this._.L & 0xFF }
   get SP() { return this._.SP & 0xFF }
   get PC() { return this._.PC & 0xFF }
+  set A(v) { this._.A = v & 0xFF }
+  set B(v) { this._.B = v & 0xFF }
+  set D(v) { this._.D = v & 0xFF }
+  set H(v) { this._.H = v & 0xFF }
+  set FZ(v) { this._.FZ = v & 0x01 }
+  set FN(v) { this._.FN = v & 0x01 }
+  set FH(v) { this._.FH = v & 0x01 }
+  set FC(v) { this._.FC = v & 0x01 }
+  set C(v) { this._.C = v & 0xFF }
+  set E(v) { this._.E = v & 0xFF }
+  set L(v) { this._.L = v & 0xFF }
+  set SP(v) { this._.SP = v & 0xFF }
+  set PC(v) { this._.PC = v & 0xFF }
 }
 
 class Core {
