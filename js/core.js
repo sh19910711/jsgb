@@ -180,7 +180,7 @@ class Operations {
   }
 
   LDrr_HA() {
-    this.r.D = this.r.A;
+    this.r.H = this.r.A;
     this.clocks = 4;
   }
 
