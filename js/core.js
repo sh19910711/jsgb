@@ -105,6 +105,17 @@ class System {
   get TAC() { return this._.TAC & 0xFF; }
   get DMA() { return this._.DMAj & 0xFF; }
   get IME() { return this._.IME & 0xFF; }
+  get IE_VBLANK() { return this._.IE_VBLANK & 0x01 }
+  get IE_LCD_STAT() { return this._.IE_LCD_STAT & 0x01 }
+  get IE_TIMER() { return this._.IE_TIMER & 0x01 }
+  get IE_JOYPAD() { return this._.IE_JOYPAD & 0x01 }
+  get IE() {
+    return this.IE_VBLANK << 0
+      | this.IE_LCD_STAT << 1
+      | this.IE_TIMER << 2
+      | this.IE_SERIAL << 3
+      | this.IE_JOYPAD << 4;
+  }
 
   set P1(v) { this.P1 = v & 0xFF }
   set SB(v) { this.SB = v & 0xFF }
