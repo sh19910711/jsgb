@@ -742,8 +742,8 @@ class Operations {
     this.r.A = d0 + d1;
     this.r.FZ = zero8(d0, d1)
     this.r.FN = 0;
-    this.r.FH = carry8(d0, d1);
-    this.r.FC = halfCarry8(d0, d1);
+    this.r.FH = halfCarry8(d0, d1);
+    this.r.FC = carry8(d0, d1);
     this.cycles = 4;
   }
 
@@ -753,8 +753,8 @@ class Operations {
     this.r.A = d0 + d1;
     this.r.FZ = zero8(d0, d1)
     this.r.FN = 0;
-    this.r.FH = carry8(d0, d1);
-    this.r.FC = halfCarry8(d0, d1);
+    this.r.FH = halfCarry8(d0, d1);
+    this.r.FC = carry8(d0, d1);
     this.cycles = 4;
   }
 
@@ -764,8 +764,8 @@ class Operations {
     this.r.A = d0 + d1;
     this.r.FZ = zero8(d0, d1)
     this.r.FN = 0;
-    this.r.FH = carry8(d0, d1);
-    this.r.FC = halfCarry8(d0, d1);
+    this.r.FH = halfCarry8(d0, d1);
+    this.r.FC = carry8(d0, d1);
     this.cycles = 4;
   }
 
@@ -775,8 +775,8 @@ class Operations {
     this.r.A = d0 + d1;
     this.r.FZ = zero8(d0, d1)
     this.r.FN = 0;
-    this.r.FH = carry8(d0, d1);
-    this.r.FC = halfCarry8(d0, d1);
+    this.r.FH = halfCarry8(d0, d1);
+    this.r.FC = carry8(d0, d1);
     this.cycles = 4;
   }
 
@@ -786,8 +786,8 @@ class Operations {
     this.r.A = d0 + d1;
     this.r.FZ = zero8(d0, d1)
     this.r.FN = 0;
-    this.r.FH = carry8(d0, d1);
-    this.r.FC = halfCarry8(d0, d1);
+    this.r.FH = halfCarry8(d0, d1);
+    this.r.FC = carry8(d0, d1);
     this.cycles = 4;
   }
 
@@ -797,8 +797,8 @@ class Operations {
     this.r.A = d0 + d1;
     this.r.FZ = zero8(d0, d1)
     this.r.FN = 0;
-    this.r.FH = carry8(d0, d1);
-    this.r.FC = halfCarry8(d0, d1);
+    this.r.FH = halfCarry8(d0, d1);
+    this.r.FC = carry8(d0, d1);
     this.cycles = 4;
   }
 
@@ -808,8 +808,8 @@ class Operations {
     this.r.A = d0 + d1;
     this.r.FZ = zero8(d0, d1)
     this.r.FN = 0;
-    this.r.FH = carry8(d0, d1);
-    this.r.FC = halfCarry8(d0, d1);
+    this.r.FH = halfCarry8(d0, d1);
+    this.r.FC = carry8(d0, d1);
     this.cycles = 4;
   }
 
@@ -820,8 +820,8 @@ class Operations {
     this.r.A = d0 + d1;
     this.r.FZ = zero8(d0, d1)
     this.r.FN = 0;
-    this.r.FH = carry8(d0, d1);
-    this.r.FC = halfCarry8(d0, d1);
+    this.r.FH = halfCarry8(d0, d1);
+    this.r.FC = carry8(d0, d1);
     this.cycles = 8;
   }
 
