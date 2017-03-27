@@ -812,6 +812,18 @@ class Operations {
     this.r.FC = halfCarry8(d0, d1);
     this.cycles = 4;
   }
+
+  ADDAn() {
+    const d0 = this.r.A;
+    const d1 = this.m.read8(this.r.PC);
+    this.tick();
+    this.r.A = d0 + d1;
+    this.r.FZ = zero8(d0, d1)
+    this.r.FN = 0;
+    this.r.FH = carry8(d0, d1);
+    this.r.FC = halfCarry8(d0, d1);
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1) {
