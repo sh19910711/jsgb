@@ -422,7 +422,7 @@ class Operations {
     map[0xd4] = this.CALLccnn_NC;
     map[0xd5] = this.PUSH_DE;
     map[0xd6] = this.SUBn;
-    map[0xd7] = this.RST_F(0x10);
+    map[0xd7] = this.RST_f(0x10);
     map[0xd8] = this.RETcc_Z;
     map[0xd9] = this.RET;
     map[0xda] = this.JPccnn_C;
