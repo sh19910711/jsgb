@@ -2727,6 +2727,17 @@ class Operations {
       this.cycles = 12;
     }
   }
+
+  JPccnn_NZ() {
+    const addr = this.m.read16(this.r.PC);
+    this.tickn(2);
+    if (!this.r.FZ) {
+      this.r.PC = addr;
+      this.cycles = 16;
+    } else {
+      this.cycles = 12;
+    }
+  }
 }
 
 function zero8(d0, d1, d2) {
