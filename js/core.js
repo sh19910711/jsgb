@@ -1930,6 +1930,11 @@ class Operations {
   STOP() { // TODO: implement me
     this.cycles = 4;
   }
+
+  DI() {
+    this.sys.IME = 0;
+    this.cycles = 4;
+  }
 }
 
 function zero8(d0, d1, d2) {
