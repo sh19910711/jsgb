@@ -566,6 +566,11 @@ class Operations {
     this.tickn(2);
     this.state = 16;
   }
+
+  LDddA_BC() {
+    this.m.write8(this.r.BC, this.r.A);
+    this.state = 8;
+  }
 }
 
 /*********************************
