@@ -1857,6 +1857,16 @@ class Operations {
     this.r.FC = 0;
     this.cycles = 8;
   }
+
+  SWAPr_E() {
+    const v = this.r.E;
+    const s = (this.r.E = (v & 0xF0) >> 4 | (v & 0x0F) << 4);
+    this.r.FZ = s == 0;
+    this.r.FN = 0;
+    this.r.FH = 0;
+    this.r.FC = 0;
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
