@@ -2858,6 +2858,15 @@ class Operations {
     this.r.PC = this.stackPop8() + this.stackPop8() << 8;
     this.cycles = 16;
   }
+
+  RETcc_C() {
+    if (this.r.FC) {
+      this.op.RET();
+      this.cycles = 20;
+    } else {
+      this.cycles = 8;
+    }
+  }
 }
 
 function zero8(d0, d1, d2) {
