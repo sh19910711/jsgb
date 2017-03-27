@@ -765,6 +765,11 @@ function carry8(d0, d1, d2) {
   return d0 + d1 + d2 > 0xFF;
 }
 
+function halfCarry8(d0, d1, d2) {
+  d2 = d2 || 0;
+  return d0 + d1 + d2 > 0x0F;
+}
+
 function carry16(d0, d1, d2) {
   d2 = d2 || 0;
   return d0 + d1 + d2 > 0xFFFF;
