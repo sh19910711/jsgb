@@ -2867,6 +2867,15 @@ class Operations {
       this.cycles = 8;
     }
   }
+
+  RETcc_NC() {
+    if (!this.r.FC) {
+      this.op.RET();
+      this.cycles = 20;
+    } else {
+      this.cycles = 8;
+    }
+  }
 }
 
 function zero8(d0, d1, d2) {
