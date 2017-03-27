@@ -649,6 +649,24 @@ class Operations {
     cbMap[0x9d] = this.RESr_L(3);
     cbMap[0x9e] = this.RESHL(3);
     cbMap[0x9f] = this.RESr_A(3);
+
+    // 0xA0
+    cbMap[0xa0] = this.RESr_B(4);
+    cbMap[0xa1] = this.RESr_C(4);
+    cbMap[0xa2] = this.RESr_D(4);
+    cbMap[0xa3] = this.RESr_E(4);
+    cbMap[0xa4] = this.RESr_H(4);
+    cbMap[0xa5] = this.RESr_L(4);
+    cbMap[0xa6] = this.RESHL(4);
+    cbMap[0xa7] = this.RESr_A(4);
+    cbMap[0xa8] = this.RESr_B(5);
+    cbMap[0xa9] = this.RESr_C(5);
+    cbMap[0xaa] = this.RESr_D(5);
+    cbMap[0xab] = this.RESr_E(5);
+    cbMap[0xac] = this.RESr_H(5);
+    cbMap[0xad] = this.RESr_L(5);
+    cbMap[0xae] = this.RESHL(5);
+    cbMap[0xaf] = this.RESr_A(5);
   }
 
   //
