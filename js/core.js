@@ -448,6 +448,24 @@ class Operations {
     map[0xee] = this.XORn;
     map[0xef] = this.RST_f(0x28);
 
+    // 0xF0
+    map[0xf0] = this.LDHAn;
+    map[0xf1] = this.POP_AF;
+    map[0xf2] = nothing;
+    map[0xf3] = this.DI;
+    map[0xf4] = nothing;
+    map[0xf5] = this.PUSH_AF;
+    map[0xf6] = this.ORn;
+    map[0xf7] = this.RST_f(0x30);
+    map[0xf8] = this.LDHLSPe;
+    map[0xf9] = this.LDSPHL;
+    map[0xfa] = this.LDAss_nn;
+    map[0xfb] = this.EI;
+    map[0xfc] = nothing;
+    map[0xfd] = nothing;
+    map[0xfe] = this.CPn;
+    map[0xff] = this.RST_f(0x38);
+
     const cbMap = new Array(0xFF); // 0xCB-prefix
   }
 
