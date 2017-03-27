@@ -21,6 +21,7 @@ class Registers {
   get B() { return this._.B & 0xFF }
   get D() { return this._.D & 0xFF }
   get H() { return this._.H & 0xFF }
+  get F() { return (this._.FZ << 7 | this._.FN << 6 | this._.FH << 5 | this._.FC << 4) & 0xF0 }
   get FZ() { return this._.FZ & 0xFF }
   get FN() { return this._.FN & 0xFF }
   get FH() { return this._.FH & 0xFF }
