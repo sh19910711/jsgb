@@ -3138,10 +3138,12 @@ class Operations {
   }
 
   BITr_B(b) {
-    this.r.FZ = !(this.r.B & 1 << b);
-    this.r.FN = 0;
-    this.r.FH = 1;
-    this.cycles = 8;
+    return function() {
+      this.r.FZ = !(this.r.B & 1 << b);
+      this.r.FN = 0;
+      this.r.FH = 1;
+      this.cycles = 8;
+    };
   }
 
   BITr_D(b) {
