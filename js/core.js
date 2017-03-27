@@ -1911,6 +1911,13 @@ class Operations {
     this.r.FH = 0;
     this.cycles = 4;
   }
+
+  SCF() {
+    this.r.FC = 1;
+    this.r.FN = 0;
+    this.r.FH = 0;
+    this.cycles = 4;
+  }
 }
 
 function zero8(d0, d1, d2) {
