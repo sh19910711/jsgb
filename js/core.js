@@ -323,6 +323,12 @@ class Operations {
   }
 }
 
+class RAM {
+  constructor() {
+    this.data = new Array(0x10000);
+  }
+}
+
 class Core {
   constructor() {
     this.r = new Registers;
