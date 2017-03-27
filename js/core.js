@@ -664,6 +664,11 @@ class Operations {
     this.tickn(2);
     this.cycles = 12;
   }
+
+  LDSPHL() {
+    this.r.SP = this.r.HL;
+    this.cycles = 8;
+  }
 }
 
 /*********************************
