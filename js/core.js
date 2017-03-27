@@ -1952,6 +1952,17 @@ class Operations {
     this.r.FC = r & 0x80;
     this.cycles = 4;
   }
+
+  RLA() {
+    const r = this.r.A;
+    const v = (r << 1) & 0xFF | this.r.FC;
+    this.r.A = v;
+    this.r.FZ = 0;
+    this.r.FN = 0;
+    this.r.FH = 0;
+    this.r.FC = r & 0x80;
+    this.cycles = 4;
+  }
 }
 
 function zero8(d0, d1, d2) {
