@@ -679,6 +679,7 @@ class Operations {
     this.r.FN = 0;
     this.r.FH = halfCarry16(this.r.SP, e);
     this.r.FC = carry16(this.r.SP, e);
+    this.cycles = 12;
   }
 }
 
