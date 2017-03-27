@@ -1985,6 +1985,16 @@ class Operations {
     this.r.FC = r & 0x01;
     this.cycles = 4;
   }
+
+  RLCr_A() {
+    const r = this.r.A;
+    const v = (this.r.A = (r << 1) & 0xFF | r >> 7);
+    this.r.FZ = v == 0;
+    this.r.FN = 0;
+    this.r.FH = 0;
+    this.r.FC = r & 0x80;
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
