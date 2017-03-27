@@ -117,6 +117,18 @@ class System {
       | this.IE_SERIAL << 3
       | this.IE_JOYPAD << 4;
   }
+  get IF_VBLANK() { return this._.IF_VBLANK & 0x01 }
+  get IF_LCD_STAT() { return this._.IF_LCD_STAT & 0x01 }
+  get IF_TIMER() { return this._.IF_TIMER & 0x01 }
+  get IF_SERIAL() { return this._.IF_SERIAL & 0x01 }
+  get IF_JOYPAD() { return this._.IF_JOYPAD & 0x01 }
+  get IF() {
+    return this.IF_VBLANK << 0
+      | this.IF_LCD_STAT << 1
+      | this.IF_TIMER << 2
+      | this.IF_SERIAL << 3
+      | this.IF_JOYPAD << 4;
+  }
 
   set P1(v) { this.P1 = v & 0xFF }
   set SB(v) { this.SB = v & 0xFF }
