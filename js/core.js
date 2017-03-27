@@ -757,6 +757,10 @@ class Operations {
     cbMap[0xfd] = this.SETr_L(7);
     cbMap[0xfe] = this.SETHL(7);
     cbMap[0xff] = this.SETr_A(7);
+
+    // binding
+    this.map = map.map(fn => { fn.bind(core)});
+    this.cbMap = cbMap.map(fn => { fn.bind(core) });
   }
 
   //
