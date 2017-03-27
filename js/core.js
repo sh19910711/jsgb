@@ -671,6 +671,10 @@ class RAM {
 
     return this.data[addr] = v;
   }
+
+  read16(addr) {
+    return this.read8(addr) | this.read8(addr + 1) << 8;
+  }
 }
 
 class LCD {
