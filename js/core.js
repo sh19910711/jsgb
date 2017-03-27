@@ -1766,6 +1766,11 @@ class Operations {
     this.r.FC = carry16(v, e);
     this.cycles = 16;
   }
+
+  INC_BC() {
+    this.r.BC = this.r.BC + 1;
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
