@@ -463,6 +463,11 @@ class Operations {
     this.tick();
     this.cycles = 8;
   }
+
+  LDrHL_A() {
+    this.r.A = this.m.read8(this.r.HL);
+    this.cycles = 8;
+  }
 }
 
 /*********************************
