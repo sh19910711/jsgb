@@ -1754,6 +1754,18 @@ class Operations {
     this.r.FC = carry16(d0, d1);
     this.cycles = 8;
   }
+
+  ADDSPe() {
+    const v = this.r.SP;
+    const e = toSign8(this.m.read8(this.r.PC));
+    this.tick();
+    this.r.SP = this.r.SP + e;
+    this.r.FZ = 0;
+    this.r.FN = 0;
+    this.r.FH = halfCarry16(v, e); // TODO: need to check sign?
+    this.r.FC = carry16(v, e);
+    this.cycles = 16;
+  }
 }
 
 function zero8(d0, d1, d2) {
