@@ -739,4 +739,8 @@ class Core {
   tick() {
     this.r.PC = this.r.PC + 1;
   }
+
+  tickn(n) {
+    this.r.PC = this.r.PC + n;
+  }
 }
