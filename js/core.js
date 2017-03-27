@@ -2827,6 +2827,15 @@ class Operations {
       this.cycles = 12;
     }
   }
+
+  CALLccnn_Z() {
+    if (this.r.FZ) {
+      this.op.CALLnn();
+    } else {
+      this.tickn(2);
+      this.cycles = 12;
+    }
+  }
 }
 
 function zero8(d0, d1, d2) {
