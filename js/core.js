@@ -2853,6 +2853,11 @@ class Operations {
     this.r.PC = f & 0x00FF;
     this.cycles = 16;
   }
+
+  RET() {
+    this.r.PC = this.stackPop8() + this.stackPop8() << 8;
+    this.cycles = 16;
+  }
 }
 
 function zero8(d0, d1, d2) {
