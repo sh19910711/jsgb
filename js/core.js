@@ -192,6 +192,24 @@ class Operations {
     map[0x0e] = this.LDrn_C;
     map[0x0f] = this.RRCr_A;
 
+    // 0x10
+    map[0x10] = this.STOP;
+    map[0x11] = this.LDddnn_DE;
+    map[0x12] = this.LDddA_DE;
+    map[0x13] = this.INC_DE;
+    map[0x14] = this.INCr_D;
+    map[0x15] = this.DECr_D;
+    map[0x16] = this.LDrn_D;
+    map[0x17] = this.RLr_A;
+    map[0x18] = this.JRe;
+    map[0x19] = this.ADDHL_DE;
+    map[0x1a] = this.LDAss_DE;
+    map[0x1b] = this.DEC_DE;
+    map[0x1c] = this.INCr_E;
+    map[0x1d] = this.DECr_E;
+    map[0x1e] = this.LDrn_e;
+    map[0x1f] = this.RRr_A;
+
     const cbMap = new Array(0xFF); // 0xCB-prefix
   }
 
