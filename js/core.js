@@ -173,6 +173,25 @@ class System {
 class Operations {
   constructor(core) {
     const map = new Array(0xFF);
+
+    // 0x00
+    map[0x00] = this.NOP;
+    map[0x01] = this.LDddnn_BC;
+    map[0x02] = this.LDddA_BC;
+    map[0x03] = this.INC_BC;
+    map[0x04] = this.INCr_B;
+    map[0x05] = this.DECr_B;
+    map[0x06] = this.LDrn_B;
+    map[0x07] = this.RLCr_A;
+    map[0x08] = this.LDnnSP;
+    map[0x09] = this.ADDHL_BC;
+    map[0x0a] = this.LDAss_BC;
+    map[0x0b] = this.DEC_BC;
+    map[0x0c] = this.INCr_C;
+    map[0x0d] = this.DECr_C;
+    map[0x0e] = this.LDrn_C;
+    map[0x0f] = this.RRCr_A;
+
     const cbMap = new Array(0xFF); // 0xCB-prefix
   }
 
