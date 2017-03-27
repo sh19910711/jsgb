@@ -686,6 +686,12 @@ class Operations {
     this.r.SP = this.r.SP - 1;
     this.m.write8(this.r.SP, v);
   }
+
+  pop8() {
+    const v = this.m.read8(this.r.SP);
+    this.r.SP = this.r.SP + 1;
+    return v;
+  }
 }
 
 function signed8(v) {
