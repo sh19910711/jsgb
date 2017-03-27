@@ -103,6 +103,11 @@ class Operations {
     this.r.A = this.r.E;
     this.clocks = 4;
   }
+
+  LDrr_AL() {
+    this.r.A = this.r.L;
+    this.clocks = 4;
+  }
 }
 
 class Core {
