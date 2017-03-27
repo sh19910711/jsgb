@@ -627,6 +627,12 @@ class Operations {
     this.tick();
     this.cycles = 12;
   }
+
+  LDHAn() {
+    this.r.A = this.m.read8(0xFF00 | this.m.read8(this.r.PC));
+    this.tick();
+    this.cycles = 12;
+  }
 }
 
 /*********************************
