@@ -188,6 +188,11 @@ class Operations {
     this.r.H = this.r.B;
     this.clocks = 4;
   }
+
+  LDrr_HD() {
+    this.r.H = this.r.B;
+    this.clocks = 4;
+  }
 }
 
 class Core {
