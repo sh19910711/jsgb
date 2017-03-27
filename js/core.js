@@ -1021,6 +1021,18 @@ class Operations {
     this.r.FC = carrySub8(d0, d1);
     this.cycles = 4;
   }
+
+  SUBn() {
+    const d0 = this.r.A;
+    const d1 = this.m.read8(this.r.PC);
+    this.tick();
+    this.r.A = d0 - d1;
+    this.r.FZ = zeroSub8(d0, d1);
+    this.r.FN = 1;
+    this.r.FH = halfCarrySub8(d0, d1);
+    this.r.FC = carrySub8(d0, d1);
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
