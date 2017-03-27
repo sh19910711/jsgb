@@ -2676,6 +2676,12 @@ class Operations {
     this.r.L = ~(~this.r.L & 0xFF | 1 << b);
     this.cycles = 8;
   }
+
+  RESHL(b) {
+    const r = this.m.read8(this.r.HL);
+    this.m.write8(this.r.HL, ~(~r & 0xFF | 1 << b));
+    this.cycles = 16;
+  }
 }
 
 function zero8(d0, d1, d2) {
