@@ -1538,6 +1538,15 @@ class Operations {
     this.r.FC = carrySub8(this.r.A, v);
     this.cycles = 8;
   }
+
+  CPHL() {
+    const v = this.m.read8(this.r.HL);
+    this.r.FZ = (this.r.A - v) == 0;
+    this.r.FN = 1;
+    this.r.FH = halfCarrySub8(this.r.A, v);
+    this.r.FC = carrySub8(this.r.A, v);
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
