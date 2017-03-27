@@ -613,6 +613,24 @@ class Operations {
     cbMap[0x7d] = this.BITr_L(7);
     cbMap[0x7e] = this.BITHL(7);
     cbMap[0x7f] = this.BITr_A(7);
+
+    // 0x80
+    cbMap[0x80] = this.RESr_B(0);
+    cbMap[0x81] = this.RESr_C(0);
+    cbMap[0x82] = this.RESr_D(0);
+    cbMap[0x83] = this.RESr_E(0);
+    cbMap[0x84] = this.RESr_H(0);
+    cbMap[0x85] = this.RESr_L(0);
+    cbMap[0x86] = this.RESHL(0);
+    cbMap[0x87] = this.RESr_A(0);
+    cbMap[0x88] = this.RESr_B(1);
+    cbMap[0x89] = this.RESr_C(1);
+    cbMap[0x8a] = this.RESr_D(1);
+    cbMap[0x8b] = this.RESr_E(1);
+    cbMap[0x8c] = this.RESr_H(1);
+    cbMap[0x8d] = this.RESr_L(1);
+    cbMap[0x8e] = this.RESHL(1);
+    cbMap[0x8f] = this.RESr_A(1);
   }
 
   //
