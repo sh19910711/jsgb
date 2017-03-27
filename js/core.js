@@ -2809,6 +2809,15 @@ class Operations {
     this.stackPush8(this.r.PC & 0x00FF);
     this.cycles = 24;
   }
+
+  CALLccnn_C() {
+    if (this.r.FC) {
+      this.op.CALLnn();
+    } else {
+      this.tickn(2);
+      this.cycles = 12;
+    }
+  }
 }
 
 function zero8(d0, d1, d2) {
