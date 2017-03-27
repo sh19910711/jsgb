@@ -2801,6 +2801,14 @@ class Operations {
     this.r.PC = addr;
     this.cycles = 24;
   }
+
+  CALLnn() {
+    const addr = this.m.read16(this.r.PC);
+    this.tickn(2);
+    this.stackPush8((this.r.PC & 0xFF00) >> 8);
+    this.stackPush8(this.r.PC & 0x00FF);
+    this.cycles = 24;
+  }
 }
 
 function zero8(d0, d1, d2) {
