@@ -1940,6 +1940,8 @@ class Operations {
     this.sys.IME = 1;
     this.cycles = 4;
   }
+
+  // Rotates
 }
 
 function zero8(d0, d1, d2) {
