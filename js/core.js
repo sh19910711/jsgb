@@ -609,6 +609,12 @@ class Operations {
     this.r.HL = this.r.HL - 1;
     this.cycles = 8;
   }
+
+  LDIAHL() {
+    this.r.A = this.m.read8(this.r.HL);
+    this.r.HL = this.r.HL + 1;
+    this.cycles = 8;
+  }
 }
 
 /*********************************
