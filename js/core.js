@@ -2661,6 +2661,11 @@ class Operations {
     this.r.H = ~(~this.r.H & 0xFF | 1 << b);
     this.cycles = 8;
   }
+
+  RESr_C(b) {
+    this.r.C = ~(~this.r.C & 0xFF | 1 << b);
+    this.cycles = 8;
+  }
 }
 
 function zero8(d0, d1, d2) {
