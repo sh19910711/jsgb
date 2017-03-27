@@ -209,7 +209,7 @@ class Operations {
     map[0x1b] = this.DEC_DE;
     map[0x1c] = this.INCr_E;
     map[0x1d] = this.DECr_E;
-    map[0x1e] = this.LDrn_e;
+    map[0x1e] = this.LDrn_E;
     map[0x1f] = this.RRr_A;
 
     // 0x20
