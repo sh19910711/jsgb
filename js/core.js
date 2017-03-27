@@ -948,7 +948,12 @@ class Operations {
 
 function zero8(d0, d1, d2) {
   d2 = d2 || 0;
-  return (d0 + d1 + d2) & 0xFF == 0;
+  return (d0 + d1 + d2) == 0;
+}
+
+function zeroSub8(d0, d1, d2) {
+  d2 = d2 || 0;
+  return (d0 - d1 - d2) == 0;
 }
 
 function signed8(v) {
