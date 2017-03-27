@@ -473,6 +473,11 @@ class Operations {
     this.r.B = this.m.read8(this.r.HL);
     this.cycles = 8;
   }
+
+  LDrHL_D() {
+    this.r.D = this.m.read8(this.r.HL);
+    this.cycles = 8;
+  }
 }
 
 /*********************************
