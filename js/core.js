@@ -560,6 +560,12 @@ class Operations {
     this.r.A = this.m.read8(this.r.HL);
     this.state = 8;
   }
+
+  LDAss_nn() {
+    this.r.A = this.m.read8(this.m.read16(this.r.PC));
+    this.tickn(2);
+    this.state = 16;
+  }
 }
 
 /*********************************
