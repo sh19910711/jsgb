@@ -412,6 +412,24 @@ class Operations {
     map[0xce] = this.SBCn;
     map[0xcf] = this.RST_f(0x08);
 
+    // 0xD0
+    map[0xd0] = this.RETcc_NZ;
+    map[0xd1] = this.POP_DE;
+    map[0xd2] = this.JPccnn_NC;
+    map[0xd3] = nothing;
+    map[0xd4] = this.CALLccnn_NC;
+    map[0xd5] = this.PUSH_DE;
+    map[0xd6] = this.SUBn;
+    map[0xd7] = this.RST_F(0x10);
+    map[0xd8] = this.RETcc_Z;
+    map[0xd9] = this.RET;
+    map[0xda] = this.JPccnn_C;
+    map[0xdb] = nothing;
+    map[0xdc] = this.CALLccnn_C;
+    map[0xdd] = nothing;
+    map[0xde] = this.SBCn;
+    map[0xdf] = this.RST_f(0x18);
+
     const cbMap = new Array(0xFF); // 0xCB-prefix
   }
 
