@@ -264,6 +264,24 @@ class Operations {
     map[0x4e] = this.LDrHL_C;
     map[0x4f] = this.LDrr_CA;
 
+    // 0x50
+    map[0x50] = this.LDrr_DB;
+    map[0x51] = this.LDrr_DC;
+    map[0x52] = this.LDrr_DD;
+    map[0x53] = this.LDrr_DE;
+    map[0x54] = this.LDrr_DH;
+    map[0x55] = this.LDrr_DL;
+    map[0x56] = this.LDrHL_D;
+    map[0x57] = this.LDrr_DA;
+    map[0x58] = this.LDrr_EB;
+    map[0x59] = this.LDrr_EC;
+    map[0x5a] = this.LDrr_ED;
+    map[0x5b] = this.LDrr_EE;
+    map[0x5c] = this.LDrr_EH;
+    map[0x5d] = this.LDrr_EL;
+    map[0x5e] = this.LDrHL_E;
+    map[0x5f] = this.LDrr_EA;
+
     const cbMap = new Array(0xFF); // 0xCB-prefix
   }
 
