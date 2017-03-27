@@ -21,7 +21,6 @@ class Registers {
   get B() { return this._.B & 0xFF }
   get D() { return this._.D & 0xFF }
   get H() { return this._.H & 0xFF }
-  get F() { return (this._.FZ << 7 | this._.FN << 6 | this._.FH << 5 | this._.FC << 4) & 0xF0 }
   get FZ() { return this._.FZ & 0xFF }
   get FN() { return this._.FN & 0xFF }
   get FH() { return this._.FH & 0xFF }
@@ -31,6 +30,8 @@ class Registers {
   get L() { return this._.L & 0xFF }
   get SP() { return this._.SP & 0xFF }
   get PC() { return this._.PC & 0xFF }
+  get F() { return (this.FZ << 7 | this.FN << 6 | this.FH << 5 | this.FC << 4) & 0xF0 }
+
   set A(v) { this._.A = v & 0xFF }
   set B(v) { this._.B = v & 0xFF }
   set D(v) { this._.D = v & 0xFF }
@@ -44,6 +45,12 @@ class Registers {
   set L(v) { this._.L = v & 0xFF }
   set SP(v) { this._.SP = v & 0xFF }
   set PC(v) { this._.PC = v & 0xFF }
+  set F(v) {
+    this.FZ = (v & 0x80) >> 7;
+    this.FN = (v & 0x40) >> 6;
+    this.FH = (v & 0x20) >> 5;
+    this.FC = (v & 0x10) >> 4;
+  }
 }
 
 class Core {
